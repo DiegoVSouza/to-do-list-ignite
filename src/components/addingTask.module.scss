@@ -15,6 +15,10 @@
         padding: 1rem;
         border-radius: 0.5rem;
 
+        @media (max-width: 1080px) {
+            width: 60%;
+        }
+
         &:-moz-placeholder {
             color: gray;
         }
@@ -67,6 +71,10 @@
         margin-bottom: 1rem;
         transition: all 200ms;
 
+        @media (max-width: 1080px) {
+            width: 90%;
+        }
+
         &:hover {
             transform: translateY(-10%);
         }
@@ -87,6 +95,10 @@
 
         div {
             width: 80%;
+
+            @media (max-width: 1080px) {
+                width: 60%;
+            }
 
             textarea {
                 font-size: 0.85rem;

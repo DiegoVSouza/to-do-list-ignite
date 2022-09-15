@@ -18,6 +18,9 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    @media (max-width: 1080px) {
+        width: 90%;
+    }
 
     div {
         position: relative;
@@ -57,6 +60,10 @@
 
 .bodylist {
     width: 45%;
+
+    @media (max-width: 1080px) {
+        width: 90%;
+    }
 
     div {
         height: 15rem;

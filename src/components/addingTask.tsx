@@ -27,6 +27,7 @@ export const AddingTask = (): JSX.Element => {
         oldTasks.push(newTask)
         setTasks(oldTasks)
         localStorage.setItem("@tasks:opentasks", JSON.stringify(oldTasks))
+        setTask("")
     }
 
     const handleCheck = (index: number) => {
@@ -69,7 +70,7 @@ export const AddingTask = (): JSX.Element => {
     return (
         <main>
             <div className={styles.input}>
-                <input type="text" placeholder='Adicione uma nova tarefa' onChange={(e) => setTask(e.currentTarget.value)} />
+                <input type="text" placeholder='Adicione uma nova tarefa' onChange={(e) => setTask(e.currentTarget.value)} value={task} />
                 <button onClick={addTask}>Criar <AiOutlinePlusCircle /></button>
             </div>
             <ListTask tasks={tasks} />
