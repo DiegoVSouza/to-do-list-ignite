@@ -29,10 +29,11 @@ export const ListTask: React.FC<ListProps> = ({ tasks }) => {
         <article className={styles.mainlist}>
             <section className={styles.headerlist}>
                 <label>Tarefas criadas<div><span>{tasks ? tasks.length : 0}</span></div></label>
-                <label>Concluídas <div><span>{doneTasks ? doneTasks.length : 0}</span></div></label>
+                <label>Concluídas <div className={styles.countdiv}><span>{doneTasks ? `${doneTasks.length} de ${tasks.length}` : `0 de ${tasks.length}`}</span></div></label>
             </section>
             <section className={styles.bodylist}>
-                {tasks?.length > 0 ? <></>
+                {tasks?.length > 0 ?
+                    <></>
                     :
                     <div>
                         <img src={Clipboard} alt="" />
